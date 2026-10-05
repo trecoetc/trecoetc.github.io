@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-05",
+  "published": true,
+  "items": [
+    {
+      "category": "ouvindo",
+      "title": "Cícero — Canções de Apartamento",
+      "comment": "aparentemente voltamos para 2011. ninguém foi consultado.",
+      "image": "uploads/interesses/cancoes-de-apartamento.jpg",
+      "alt": "Capa de Canções de Apartamento, de Cícero",
+      "credit": "Capa: Canções de Apartamento (2011)."
+    },
+    {
+      "category": "fuçando",
+      "title": "capas de livros dos anos 70",
+      "comment": "abrimos para olhar a capa. a leitura ficou para depois."
+    },
+    {
+      "category": "assistindo",
+      "title": "créditos de abertura desnecessariamente bons",
+      "comment": "o episódio começa e a gente ainda está pensando na tipografia."
+    },
+    {
+      "category": "fuçando",
+      "title": "sites que ainda parecem sites",
+      "comment": "aqueles em que dá vontade de clicar só para descobrir onde vai dar."
+    },
+    {
+      "category": "querendo",
+      "title": "cadeiras cromadas que provavelmente são desconfortáveis",
+      "comment": "a coluna tem suas dúvidas. os olhos já decidiram."
+    },
+    {
+      "category": "pensando sobre",
+      "title": "por que toda padaria tem exatamente o mesmo tipo de pegador de pão?",
+      "comment": "quem decidiu isso? houve uma reunião?"
+    }
+  ]
+}

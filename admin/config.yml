@@ -53,3 +53,25 @@ collections:
         required: false
         field: { label: "Imagem", name: "image", widget: "image" }
       - { label: "Conteúdo / case", name: "body", widget: "markdown" }
+  - name: "interesses"
+    label: "Interesses da semana"
+    label_singular: "Semana"
+    folder: "content/interesses"
+    create: true
+    extension: "json"
+    format: "json"
+    slug: "{{year}}-{{month}}-{{day}}"
+    fields:
+      - { label: "Semana de", name: "date", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+      - { label: "Publicado", name: "published", widget: "boolean", default: true }
+      - label: "Interesses"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Categoria", name: "category", widget: "string", hint: "Ouvindo, fuçando, pensando sobre… você escolhe." }
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Comentário da Treco", name: "comment", widget: "text" }
+          - { label: "Imagem", name: "image", widget: "image", required: false }
+          - { label: "Descrição da imagem", name: "alt", widget: "string", required: false }
+          - { label: "Crédito da imagem", name: "credit", widget: "string", required: false }
+          - { label: "Link", name: "url", widget: "string", required: false }
