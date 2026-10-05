@@ -2235,6 +2235,17 @@ section > *:last-child{
 @media(max-width:900px){.weekly-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weekly-item:nth-child(6){grid-column:auto}}
 @media(max-width:600px){.weekly-grid{grid-template-columns:1fr;gap:16px}.weekly-category{font-size:27px;padding:16px 18px}.weekly-content{padding:20px}.weekly-item .weekly-title{font-size:28px}}
 </style>
+<style>
+/* Seis blocos, seis cores oficiais */
+.weekly-item:nth-child(1){background:#F04424;color:#10100E}
+.weekly-item:nth-child(2){background:#FFF1C9;color:#10100E}
+.weekly-item:nth-child(3){background:#FFC515;color:#10100E}
+.weekly-item:nth-child(4){background:#FF67A0;color:#10100E}
+.weekly-item:nth-child(5){background:#064C37;color:#FFF1C9}
+.weekly-item:nth-child(6){background:#10100E;color:#FFF1C9}
+.weekly-item .weekly-category,.weekly-item:nth-child(n) .weekly-category{background:transparent;color:inherit;border-color:currentColor;font-family:"Archivo Black",sans-serif;font-weight:400}
+.weekly h2{font-family:"Archivo Black",sans-serif;font-weight:400}
+</style>
 </head>
 <body>
 <nav class="nav">
