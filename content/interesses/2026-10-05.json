@@ -3,7 +3,7 @@
   "published": true,
   "items": [
     {
-      "category": "ouvindo",
+      "category": "Música",
       "title": "Cícero — Canções de Apartamento",
       "comment": "aparentemente voltamos para 2011. ninguém foi consultado.",
       "image": "uploads/interesses/cancoes-de-apartamento.jpg",
@@ -11,29 +11,29 @@
       "credit": "Capa: Canções de Apartamento (2011)."
     },
     {
-      "category": "fuçando",
-      "title": "capas de livros dos anos 70",
-      "comment": "abrimos para olhar a capa. a leitura ficou para depois."
-    },
-    {
-      "category": "assistindo",
+      "category": "Cinema",
       "title": "créditos de abertura desnecessariamente bons",
       "comment": "o episódio começa e a gente ainda está pensando na tipografia."
     },
     {
-      "category": "fuçando",
-      "title": "sites que ainda parecem sites",
-      "comment": "aqueles em que dá vontade de clicar só para descobrir onde vai dar."
+      "category": "Design",
+      "title": "capas de livros dos anos 70",
+      "comment": "abrimos para olhar a capa. a leitura ficou para depois."
     },
     {
-      "category": "querendo",
-      "title": "cadeiras cromadas que provavelmente são desconfortáveis",
-      "comment": "a coluna tem suas dúvidas. os olhos já decidiram."
+      "category": "Marcas",
+      "title": "nomes que já começam a conversa",
+      "comment": "Cacareco. Rádio Tagarela. dá para imaginar o que vem antes de abrir."
     },
     {
-      "category": "pensando sobre",
+      "category": "Curiosidades",
       "title": "por que toda padaria tem exatamente o mesmo tipo de pegador de pão?",
       "comment": "quem decidiu isso? houve uma reunião?"
+    },
+    {
+      "category": "Etc.",
+      "title": "cadeiras cromadas que provavelmente são desconfortáveis",
+      "comment": "a coluna tem suas dúvidas. os olhos já decidiram."
     }
   ]
 }

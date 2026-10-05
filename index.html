@@ -2223,6 +2223,18 @@ section > *:last-child{
 @media(max-width:900px){.weekly-grid{grid-template-columns:1fr 1fr;gap:26px}.weekly-item:nth-child(6){grid-column:1 / -1}.weekly-item:nth-child(3){margin-top:0}}
 @media(max-width:600px){.weekly{padding:40px 20px}.weekly-header{display:block}.weekly time{margin-top:20px}.weekly-grid{grid-template-columns:1fr;gap:28px}.weekly-item:first-child{grid-row:auto}.weekly-item:nth-child(6){grid-column:auto}.weekly-item img{max-width:400px}.weekly h2{font-size:clamp(32px,10vw,54px)}}
 </style>
+<style>
+/* Interesses: blocos nominais */
+.weekly-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch;padding:30px 0}
+.weekly-item,.weekly-item:first-child,.weekly-item:nth-child(3),.weekly-item:nth-child(5),.weekly-item:nth-child(6){grid-column:auto;grid-row:auto;margin:0;max-width:none;background:var(--cream);border:2px solid var(--ink);padding:0;display:flex;flex-direction:column;min-width:0}
+.weekly-category{font:clamp(23px,2.7vw,38px)/1.1 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.04em;margin:0;padding:18px 20px;border-bottom:2px solid var(--ink);background:var(--pink);overflow-wrap:anywhere}
+.weekly-item:nth-child(2) .weekly-category,.weekly-item:nth-child(5) .weekly-category{background:var(--red)}
+.weekly-item:nth-child(3) .weekly-category,.weekly-item:nth-child(6) .weekly-category{background:var(--cream)}
+.weekly-content{padding:22px;flex:1}.weekly-item .weekly-title{font:30px/1.1 "Libre Caslon Display",serif;margin:0 0 16px}
+.weekly-item p{font:15px/1.55 "DM Mono",monospace;margin:0}.weekly-item img{width:88px;height:88px;aspect-ratio:1;object-fit:cover;float:right;margin:0 0 14px 15px;filter:none}.weekly-item small{clear:both;font:12px/1.5 "DM Mono",monospace}.weekly-content:after{content:"";display:block;clear:both}
+@media(max-width:900px){.weekly-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weekly-item:nth-child(6){grid-column:auto}}
+@media(max-width:600px){.weekly-grid{grid-template-columns:1fr;gap:16px}.weekly-category{font-size:27px;padding:16px 18px}.weekly-content{padding:20px}.weekly-item .weekly-title{font-size:28px}}
+</style>
 </head>
 <body>
 <nav class="nav">
@@ -2262,12 +2274,7 @@ section > *:last-child{
 
 <section class="weekly" id="interesses" aria-labelledby="weekly-title">
 <div class="weekly-header"><div><h2 id="weekly-title">INTERESSES<br>DA SEMANA</h2><p class="weekly-intro">coisas que entraram na nossa cabeça e ainda não saíram.</p></div><time datetime="2026-10-05">05.10.26</time></div>
-<!-- CMS:INTERESTS:START --><div class="weekly-grid"><article class="weekly-item"><img src="uploads/interesses/cancoes-de-apartamento.jpg" alt="Capa de Canções de Apartamento, de Cícero" loading="lazy" width="600" height="600"><small>OUVINDO</small><h3>Cícero — Canções de Apartamento</h3><p>aparentemente voltamos para 2011. ninguém foi consultado.</p></article>
-<article class="weekly-item"><small>FUÇANDO</small><h3>capas de livros dos anos 70</h3><p>abrimos para olhar a capa. a leitura ficou para depois.</p></article>
-<article class="weekly-item"><small>ASSISTINDO</small><h3>créditos de abertura desnecessariamente bons</h3><p>o episódio começa e a gente ainda está pensando na tipografia.</p></article>
-<article class="weekly-item"><small>FUÇANDO</small><h3>sites que ainda parecem sites</h3><p>aqueles em que dá vontade de clicar só para descobrir onde vai dar.</p></article>
-<article class="weekly-item"><small>QUERENDO</small><h3>cadeiras cromadas que provavelmente são desconfortáveis</h3><p>a coluna tem suas dúvidas. os olhos já decidiram.</p></article>
-<article class="weekly-item"><small>PENSANDO SOBRE</small><h3>por que toda padaria tem exatamente o mesmo tipo de pegador de pão?</h3><p>quem decidiu isso? houve uma reunião?</p></article></div><!-- CMS:INTERESTS:END -->
+<!-- CMS:INTERESTS:START --><div class="weekly-grid"><article class="weekly-item"><h3 class="weekly-category">Música</h3><div class="weekly-content"><img src="uploads/interesses/cancoes-de-apartamento.jpg" alt="Capa de Canções de Apartamento, de Cícero" loading="lazy" width="88" height="88"><h4 class="weekly-title">Cícero — Canções de Apartamento</h4><p>aparentemente voltamos para 2011. ninguém foi consultado.</p></div></article><article class="weekly-item"><h3 class="weekly-category">Cinema</h3><div class="weekly-content"><h4 class="weekly-title">créditos de abertura desnecessariamente bons</h4><p>o episódio começa e a gente ainda está pensando na tipografia.</p></div></article><article class="weekly-item"><h3 class="weekly-category">Design</h3><div class="weekly-content"><h4 class="weekly-title">capas de livros dos anos 70</h4><p>abrimos para olhar a capa. a leitura ficou para depois.</p></div></article><article class="weekly-item"><h3 class="weekly-category">Marcas</h3><div class="weekly-content"><h4 class="weekly-title">nomes que já começam a conversa</h4><p>Cacareco. Rádio Tagarela. dá para imaginar o que vem antes de abrir.</p></div></article><article class="weekly-item"><h3 class="weekly-category">Curiosidades</h3><div class="weekly-content"><h4 class="weekly-title">por que toda padaria tem exatamente o mesmo tipo de pegador de pão?</h4><p>quem decidiu isso? houve uma reunião?</p></div></article><article class="weekly-item"><h3 class="weekly-category">Etc.</h3><div class="weekly-content"><h4 class="weekly-title">cadeiras cromadas que provavelmente são desconfortáveis</h4><p>a coluna tem suas dúvidas. os olhos já decidiram.</p></div></article></div><!-- CMS:INTERESTS:END -->
 <a class="weekly-archive" href="interesses.html">→ ver interesses das semanas passadas</a>
 </section>
 

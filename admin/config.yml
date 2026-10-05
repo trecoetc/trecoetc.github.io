@@ -68,7 +68,7 @@ collections:
         name: "items"
         widget: "list"
         fields:
-          - { label: "Categoria", name: "category", widget: "string", hint: "Ouvindo, fuçando, pensando sobre… você escolhe." }
+          - { label: "Bloco", name: "category", widget: "select", options: ["Música", "Cinema", "Design", "Marcas", "Curiosidades", "Etc."] }
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Comentário da Treco", name: "comment", widget: "text" }
           - { label: "Imagem", name: "image", widget: "image", required: false }

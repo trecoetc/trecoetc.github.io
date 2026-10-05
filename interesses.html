@@ -15,4 +15,16 @@
 .weekly-archive-list{display:grid;gap:30px;margin-top:44px}.weekly-edition{border-top:2px solid;padding-top:24px}.weekly-edition summary{cursor:pointer;font:26px/1.3 "Libre Caslon Display",serif}.weekly-empty{font:22px/1.4 "Libre Caslon Display",serif;max-width:650px;margin:40px 0}
 @media(max-width:900px){.weekly-grid{grid-template-columns:1fr 1fr;gap:26px}.weekly-item:nth-child(6){grid-column:1 / -1}.weekly-item:nth-child(3){margin-top:0}}
 @media(max-width:600px){.weekly{padding:40px 20px}.weekly-header{display:block}.weekly time{margin-top:20px}.weekly-grid{grid-template-columns:1fr;gap:28px}.weekly-item:first-child{grid-row:auto}.weekly-item:nth-child(6){grid-column:auto}.weekly-item img{max-width:400px}.weekly h2{font-size:clamp(32px,10vw,54px)}}
-</style></head><body><main class="weekly"><a class="weekly-archive" href="index.html#interesses">← voltar para o site</a><header class="weekly-header" style="margin-top:36px"><div><h2>INTERESSES DAS<br>SEMANAS PASSADAS</h2><p class="weekly-intro">coisas que passaram pela nossa cabeça.</p></div></header><!-- CMS:INTERESTS:ARCHIVE:START --><p class="weekly-empty">Esta é a primeira semana. As próximas vão deixando as anteriores por aqui.</p><!-- CMS:INTERESTS:ARCHIVE:END --></main></body></html>
+</style><style>
+/* Interesses: blocos nominais */
+.weekly-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch;padding:30px 0}
+.weekly-item,.weekly-item:first-child,.weekly-item:nth-child(3),.weekly-item:nth-child(5),.weekly-item:nth-child(6){grid-column:auto;grid-row:auto;margin:0;max-width:none;background:var(--cream);border:2px solid var(--ink);padding:0;display:flex;flex-direction:column;min-width:0}
+.weekly-category{font:clamp(23px,2.7vw,38px)/1.1 "Archivo Black",sans-serif;text-transform:uppercase;letter-spacing:-.04em;margin:0;padding:18px 20px;border-bottom:2px solid var(--ink);background:var(--pink);overflow-wrap:anywhere}
+.weekly-item:nth-child(2) .weekly-category,.weekly-item:nth-child(5) .weekly-category{background:var(--red)}
+.weekly-item:nth-child(3) .weekly-category,.weekly-item:nth-child(6) .weekly-category{background:var(--cream)}
+.weekly-content{padding:22px;flex:1}.weekly-item .weekly-title{font:30px/1.1 "Libre Caslon Display",serif;margin:0 0 16px}
+.weekly-item p{font:15px/1.55 "DM Mono",monospace;margin:0}.weekly-item img{width:88px;height:88px;aspect-ratio:1;object-fit:cover;float:right;margin:0 0 14px 15px;filter:none}.weekly-item small{clear:both;font:12px/1.5 "DM Mono",monospace}.weekly-content:after{content:"";display:block;clear:both}
+@media(max-width:900px){.weekly-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.weekly-item:nth-child(6){grid-column:auto}}
+@media(max-width:600px){.weekly-grid{grid-template-columns:1fr;gap:16px}.weekly-category{font-size:27px;padding:16px 18px}.weekly-content{padding:20px}.weekly-item .weekly-title{font-size:28px}}
+</style>
+</head><body><main class="weekly"><a class="weekly-archive" href="index.html#interesses">← voltar para o site</a><header class="weekly-header" style="margin-top:36px"><div><h2>INTERESSES DAS<br>SEMANAS PASSADAS</h2><p class="weekly-intro">coisas que passaram pela nossa cabeça.</p></div></header><!-- CMS:INTERESTS:ARCHIVE:START --><p class="weekly-empty">Esta é a primeira semana. As próximas vão deixando as anteriores por aqui.</p><!-- CMS:INTERESTS:ARCHIVE:END --></main></body></html>
