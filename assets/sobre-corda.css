@@ -1,268 +1,165 @@
-/* A pequena mesa de corte da Seção 01. Tudo fica dentro de #sobre. */
+/* Seção 01: tipografia, papel e uma única linha que atravessa a composição. */
 #sobre.corda-section {
-  --corda-cream: #fff1c9;
-  --corda-ink: #10100e;
-  --corda-orange: #e53e24;
-  --corda-pink: #ff67a0;
-  --corda-yellow: #ffc515;
-  --corda-pull: 0;
-  --corda-settle: 0;
-  background: var(--corda-cream);
-  color: var(--corda-ink);
-  padding: clamp(40px, 5.8vw, 84px) 5vw clamp(42px, 5vw, 72px);
-  border-bottom: 2px solid var(--corda-ink);
-  scroll-margin-top: 61px;
-  isolation: isolate;
+  --corda-cream:#fff1c9; --corda-ink:#10100e; --corda-orange:#e53e24;
+  --corda-pink:#ff67a0; --corda-yellow:#ffc515;
+  --corda-pull:0; --corda-settle:0;
+  color:var(--corda-ink); background:var(--corda-cream);
+  padding:48px 5vw 36px; border-bottom:2px solid var(--corda-ink);
+  scroll-margin-top:61px; isolation:isolate;
 }
-#sobre .corda-inner { width: min(100%, 1320px); margin-inline: auto; }
+#sobre .corda-inner {
+  width:min(100%,1320px); margin-inline:auto;
+  display:grid; grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);
+  column-gap:clamp(32px,6vw,96px);
+}
 #sobre .corda-id {
-  margin: 0 0 clamp(30px, 3.4vw, 48px);
-  font: 400 11px/1.5 "DM Mono", monospace;
-  letter-spacing: .075em;
+  grid-column:1/-1; margin:0 0 40px;
+  font:400 11px/1.5 "DM Mono",monospace; letter-spacing:.065em;
 }
-#sobre .corda-title { margin: 0; color: inherit; }
+#sobre .corda-title { grid-column:1; grid-row:2; margin:0; min-width:0; color:inherit; }
 #sobre .corda-title-main {
-  display: block;
-  font: 900 clamp(50px, 7.9vw, 119px)/.96 "Helvetica", "Helvetica Neue", Arial, sans-serif;
-  letter-spacing: -.065em;
-  -webkit-text-stroke: .4px currentColor;
+  display:block; font:900 clamp(55px,9.25vw,145px)/.88 "Helvetica","Helvetica Neue",Arial,sans-serif;
+  letter-spacing:-.073em; -webkit-text-stroke:.4px currentColor;
 }
-#sobre .corda-title-part { display: inline-block; white-space: nowrap; }
+#sobre .corda-title-part { display:block; white-space:nowrap; }
 #sobre .corda-title-part:first-child {
-  transform: translate(calc(var(--corda-pull) * -3px), calc(var(--corda-pull) * -4px)) rotate(calc(var(--corda-pull) * -.4deg));
+  transform:translate(calc(var(--corda-pull) * -2px),calc(var(--corda-pull) * -2px));
 }
 #sobre .corda-title-part:last-child {
-  transform: translate(calc(var(--corda-pull) * 5px), calc(var(--corda-pull) * 3px)) rotate(calc(var(--corda-pull) * .5deg));
+  margin-top:8px;
+  transform:translate(calc(var(--corda-pull) * 3px),calc(var(--corda-pull) * 2px));
 }
 #sobre .corda-title-sub {
-  display: block;
-  margin: 12px 0 0 9%;
-  font: 400 clamp(30px, 4.8vw, 70px)/1.1 "Libre Caslon Display", Georgia, serif;
-  letter-spacing: -.025em;
+  display:block; max-width:570px; margin-top:24px;
+  font:400 clamp(30px,3.65vw,52px)/1.06 "Libre Caslon Display",Georgia,serif;
+  letter-spacing:-.025em;
 }
-#sobre .corda-table {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
-  column-gap: clamp(28px, 5vw, 78px);
-  align-items: center;
-  margin-top: clamp(28px, 3vw, 44px);
-}
-#sobre .corda-rig { position: relative; width: 100%; aspect-ratio: 500 / 340; }
-#sobre .corda-drawing { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
-#sobre .corda-paper {
-  transform-box: fill-box;
-  transform-origin: 60% 65%;
-  transform: translate(calc(var(--corda-pull) * -5px), calc(var(--corda-pull) * -3px)) rotate(calc(var(--corda-pull) * -9deg + var(--corda-settle) * 3deg));
-}
-#sobre .corda-line, #sobre .corda-scribble {
-  fill: none;
-  stroke: var(--corda-ink);
-  stroke-width: 2.2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  vector-effect: non-scaling-stroke;
-}
-#sobre .corda-scribble { stroke-width: 1.7; opacity: 0; }
-#sobre.corda-ready .corda-scribble { opacity: 1; }
-#sobre .corda-phrase {
-  position: absolute;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px 8px;
-  margin: 0;
-  max-width: 68%;
-  opacity: 0;
-  pointer-events: none;
-  font: 400 clamp(10px, 1.05vw, 14px)/1 "DM Mono", monospace;
-}
-#sobre .corda-phrase--one { left: 46%; top: 7%; }
-#sobre .corda-phrase--two { left: 43%; top: 34%; max-width: 56%; }
-#sobre .corda-phrase--three { left: 19%; top: 80%; max-width: 75%; font-style: italic; }
-#sobre .corda-bead-word { display: inline-flex; gap: 2px; white-space: nowrap; }
-#sobre .corda-bead {
-  display: inline-grid;
-  place-items: center;
-  min-width: .9em;
-  height: 1.45em;
-  padding: .06em .12em;
-  background: var(--corda-cream);
-  border: 1px solid var(--corda-ink);
-  border-radius: 2px 0 2px 1px;
-}
-#sobre .corda-phrase--one .corda-bead { background: var(--corda-pink); }
-#sobre .corda-phrase--two .corda-bead:nth-child(3n + 1) { background: var(--corda-yellow); }
-#sobre .corda-phrase--three .corda-bead:nth-child(4n + 2) { background: var(--corda-pink); }
-#sobre .corda-controls[hidden], #sobre .corda-again[hidden] { display: none; }
-#sobre .corda-handle {
-  position: absolute;
-  left: 44.8%;
-  top: 59.4%;
-  z-index: 3;
-  display: grid;
-  place-items: center;
-  width: 52px;
-  height: 52px;
-  padding: 10px;
-  transform: translate(-50%, -50%);
-  border: 0;
-  border-radius: 50%;
-  background: transparent;
-  color: inherit;
-  cursor: grab;
-  touch-action: none;
-  -webkit-tap-highlight-color: transparent;
-  user-select: none;
-}
-#sobre .corda-handle svg { width: 32px; height: 32px; overflow: visible; }
-#sobre .corda-handle:hover svg { fill: var(--corda-yellow); }
-#sobre[data-corda-state="pulling"] .corda-handle { cursor: grabbing; }
-#sobre .corda-handle[aria-disabled="true"] { cursor: default; }
-#sobre .corda-handle:focus-visible, #sobre .corda-again:focus-visible {
-  outline: 3px solid var(--corda-ink);
-  outline-offset: 5px;
-}
-#sobre .corda-hint {
-  position: absolute;
-  left: 53%;
-  top: 55%;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  white-space: nowrap;
-  pointer-events: none;
-  font: 400 clamp(10px, 1vw, 12px)/1.4 "DM Mono", monospace;
-  transform: rotate(-6deg);
-}
-#sobre .corda-hint svg { width: 30px; height: 23px; }
+#sobre .corda-table { display:contents; }
 #sobre .corda-copy {
-  position: relative;
-  min-width: 0;
-  padding: 22px 0;
-  transform: rotate(calc(-.65deg + var(--corda-settle) * .65deg));
-}
-#sobre .corda-copy::before, #sobre .corda-copy::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  pointer-events: none;
-}
-#sobre .corda-copy::before {
-  width: 94px;
-  height: 72px;
-  left: -20px;
-  top: 0;
-  background: var(--corda-pink);
-  clip-path: polygon(5% 10%, 100% 0, 90% 90%, 0 100%);
-  transform: translate(calc(var(--corda-pull) * -19px), calc(var(--corda-pull) * -12px)) rotate(calc(-9deg - var(--corda-pull) * 17deg));
-}
-#sobre .corda-copy::after {
-  width: 86px;
-  height: 58px;
-  right: -9px;
-  bottom: 4px;
-  background: var(--corda-yellow);
-  clip-path: polygon(0 2%, 94% 8%, 100% 89%, 10% 100%);
-  transform: translate(calc(var(--corda-pull) * 9px), calc(var(--corda-pull) * 13px)) rotate(calc(11deg + var(--corda-pull) * 14deg));
+  grid-column:2; grid-row:2; min-width:0; align-self:end;
+  position:relative; padding-bottom:4px;
 }
 #sobre .corda-copy-text {
-  position: relative;
-  margin: 0;
-  padding: 18px 4px 19px;
-  background: var(--corda-cream);
-  font: 400 clamp(19px, 2vw, 28px)/1.45 "Helvetica", "Helvetica Neue", Arial, sans-serif;
-  text-wrap: pretty;
+  margin:0; font:400 clamp(18px,1.85vw,25px)/1.5 "Helvetica","Helvetica Neue",Arial,sans-serif;
+  line-height:1.5!important; letter-spacing:-.016em; text-wrap:pretty;
 }
-#sobre .corda-copy-text strong { font-weight: 700; }
-#sobre .corda-copy-rule {
-  position: absolute;
-  bottom: 18px;
-  left: 4px;
-  width: 94%;
-  height: 2px;
-  background: var(--corda-ink);
-  transform-origin: left;
-  transform: scaleX(calc(.12 + var(--corda-pull) * .88));
+#sobre .corda-copy-text strong { font-weight:700; }
+#sobre .corda-copy::before {
+  content:""; position:absolute; width:38px; height:15px; top:-29px; left:0;
+  background:var(--corda-pink); clip-path:polygon(0 9%,100% 0,94% 100%,4% 91%);
+  transform:translate(calc(var(--corda-pull) * 14px),calc(var(--corda-pull) * -4px)) rotate(-5deg);
 }
+#sobre .corda-copy-rule { display:none; }
+#sobre .corda-rig {
+  grid-column:1/-1; grid-row:3; position:relative;
+  width:100%; height:210px; margin-top:28px;
+}
+#sobre .corda-drawing { position:absolute; inset:0; width:100%; height:100%; overflow:visible; }
+#sobre .corda-paper {
+  transform-box:fill-box; transform-origin:85% 50%;
+  transform:rotate(calc(var(--corda-pull) * -5deg + var(--corda-settle) * 2deg));
+}
+#sobre .corda-line, #sobre .corda-scribble {
+  fill:none; stroke:var(--corda-ink); stroke-width:2;
+  stroke-linecap:round; stroke-linejoin:round; vector-effect:non-scaling-stroke;
+}
+#sobre .corda-scribble { opacity:0; stroke-width:1.6; }
+#sobre .corda-phrase {
+  position:absolute; display:flex; flex-wrap:wrap; align-items:baseline;
+  gap:4px 7px; margin:0; opacity:0; pointer-events:none; line-height:1.12!important;
+}
+#sobre .corda-phrase--one {
+  left:17%; top:17px; max-width:21%;
+  font:900 32px/1.1 "Helvetica","Helvetica Neue",Arial,sans-serif; letter-spacing:-.045em;
+}
+#sobre .corda-phrase--two {
+  left:38%; top:122px; max-width:36%;
+  font:400 22px/1.25 "DM Mono",monospace; letter-spacing:-.045em;
+}
+#sobre .corda-phrase--three {
+  left:69%; top:10px; max-width:29%;
+  font:italic 30px/1.06 "Libre Caslon Display",Georgia,serif; letter-spacing:-.02em;
+}
+#sobre .corda-bead-word { display:inline-flex; white-space:nowrap; background:var(--corda-cream); }
+#sobre .corda-bead { display:inline-block; position:relative; min-width:0; padding:0; }
+#sobre .corda-phrase--one .corda-bead {
+  background:var(--corda-pink); padding:2px 3px; margin-right:1px;
+  border-radius:38% 42% 35% 40%;
+}
+#sobre .corda-phrase--two .corda-bead:nth-child(3n + 1) { background:var(--corda-yellow); }
+#sobre .corda-controls[hidden], #sobre .corda-again[hidden] { display:none; }
+#sobre .corda-handle {
+  position:absolute; z-index:3; display:grid; place-items:center;
+  width:60px; height:60px; padding:8px; transform:translate(-50%,-50%);
+  left:96%; top:38%; border:0; border-radius:10px; background:transparent;
+  color:inherit; cursor:grab; touch-action:none; user-select:none; -webkit-tap-highlight-color:transparent;
+}
+#sobre .corda-handle svg { width:44px; height:44px; overflow:visible; }
+#sobre .corda-handle:hover svg { fill:var(--corda-yellow); }
+#sobre[data-corda-state="pulling"] .corda-handle { cursor:grabbing; }
+#sobre .corda-handle[aria-disabled="true"] { cursor:default; }
+#sobre .corda-handle:focus-visible, #sobre .corda-again:focus-visible {
+  outline:3px solid var(--corda-ink); outline-offset:5px;
+}
+#sobre .corda-hint {
+  position:absolute; right:7px; top:133px; display:flex; align-items:center; gap:12px;
+  font:400 14px/1.3 "DM Mono",monospace; white-space:nowrap; pointer-events:none;
+}
+#sobre .corda-hint svg { width:29px; height:29px; }
 #sobre .corda-footer {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 14px 24px;
-  margin: 6px 0 0;
-  min-height: 39px;
-  padding-left: calc((100% - clamp(28px, 5vw, 78px)) / 2.1 + clamp(28px, 5vw, 78px));
+  grid-column:1/-1; grid-row:4; display:flex; flex-wrap:wrap;
+  justify-content:flex-end; align-items:baseline; gap:12px 25px;
+  min-height:36px; margin-top:0;
 }
 #sobre .corda-again {
-  flex: none;
-  padding: 6px 0;
-  border: 0;
-  border-bottom: 1px dashed currentColor;
-  border-radius: 0;
-  background: transparent;
-  color: inherit;
-  font: 400 12px/1.5 "DM Mono", monospace;
-  cursor: pointer;
+  padding:5px 0; border:0; border-bottom:1px solid; border-radius:0;
+  background:transparent; color:inherit; font:400 14px/1.4 "DM Mono",monospace; cursor:pointer;
 }
-#sobre .corda-again::before { content: "↻"; margin-right: 7px; }
-#sobre .corda-again:hover { border-bottom-style: solid; }
-#sobre .corda-afterthought {
-  margin: 0;
-  max-width: 240px;
-  font: 400 11px/1.5 "DM Mono", monospace;
-}
+#sobre .corda-again:hover { color:var(--corda-orange); }
+#sobre .corda-afterthought { margin:0; font:400 13px/1.5 "DM Mono",monospace; }
 #sobre .corda-sr {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
+  position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden;
+  clip-path:inset(50%); white-space:nowrap; border:0;
 }
-#sobre:not(.corda-ready) #corda-help { display: none; }
-@media (min-width: 1600px) {
-  #sobre .corda-title-main { font-size: 119px; }
+#sobre:not(.corda-ready) #corda-help { display:none; }
+@media (max-width:1000px) {
+  #sobre.corda-section { padding:40px 5vw 30px; }
+  #sobre .corda-inner { grid-template-columns:minmax(0,1.35fr) minmax(0,1fr); column-gap:36px; }
+  #sobre .corda-title-main { font-size:9.1vw; }
+  #sobre .corda-title-sub { font-size:clamp(29px,3.7vw,38px); }
+  #sobre .corda-copy-text { font-size:19px; }
+  #sobre .corda-phrase--one { left:17%; font-size:28px; }
+  #sobre .corda-phrase--two { left:34%; max-width:47%; font-size:18px; }
+  #sobre .corda-phrase--three { left:65%; max-width:31%; font-size:28px; }
 }
-@media (max-width: 900px) {
-  #sobre.corda-section { padding: 42px 5vw 38px; }
-  #sobre .corda-title-main { font-size: clamp(48px, 8vw, 72px); }
-  #sobre .corda-title-sub { font-size: clamp(32px, 4.8vw, 44px); margin-left: 5%; }
-  #sobre .corda-table { gap: 26px; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
-  #sobre .corda-copy-text { font-size: clamp(17px, 2.3vw, 21px); }
-  #sobre .corda-phrase { gap: 4px 6px; font-size: 10px; }
-  #sobre .corda-phrase--two { left: 40%; max-width: 60%; }
-  #sobre .corda-phrase--three { left: 10%; max-width: 88%; }
-  #sobre .corda-copy::before { width: 72px; height: 56px; left: -12px; }
-  #sobre .corda-copy::after { right: 0; width: 66px; height: 45px; }
+@media (max-width:720px) {
+  #sobre.corda-section { padding:34px 24px 28px; scroll-margin-top:55px; }
+  #sobre .corda-inner { display:grid; grid-template-columns:minmax(0,1fr); }
+  #sobre .corda-id { grid-row:1; margin-bottom:30px; font-size:10px; }
+  #sobre .corda-title { grid-column:1; grid-row:2; }
+  #sobre .corda-title-main { font-size:clamp(50px,13.8vw,94px); line-height:.89; }
+  #sobre .corda-title-part:last-child { margin-top:6px; }
+  #sobre .corda-title-sub { font-size:clamp(32px,7.4vw,43px); max-width:410px; margin-top:21px; }
+  #sobre .corda-copy { grid-column:1; grid-row:3; margin-top:27px; padding:0; }
+  #sobre .corda-copy::before { display:none; }
+  #sobre .corda-copy-text { font-size:20px; line-height:1.45; max-width:560px; }
+  #sobre .corda-rig { grid-row:4; height:262px; margin-top:20px; }
+  #sobre .corda-phrase--one { left:1%; top:125px; max-width:31%; font-size:28px; }
+  #sobre .corda-phrase--two { left:37%; top:121px; max-width:62%; font-size:18px; }
+  #sobre .corda-phrase--three { left:10%; top:201px; max-width:88%; font-size:27px; }
+  #sobre .corda-hint { top:114px; right:3px; font-size:13px; }
+  #sobre .corda-footer { grid-row:5; justify-content:flex-start; gap:10px 20px; margin-top:12px; min-height:35px; }
+  #sobre .corda-afterthought { font-size:12px; }
 }
-@media (max-width: 650px) {
-  #sobre.corda-section { padding: 34px 22px 32px; scroll-margin-top: 55px; }
-  #sobre .corda-id { font-size: 10px; margin-bottom: 28px; }
-  #sobre .corda-title-main { font-size: clamp(46px, 12.8vw, 81px); line-height: .97; letter-spacing: -.065em; }
-  #sobre .corda-title-part { display: block; }
-  #sobre .corda-title-part:last-child { margin-left: 11%; }
-  #sobre .corda-title-sub { margin: 15px 0 0 11%; font-size: clamp(31px, 6.8vw, 43px); max-width: 85%; }
-  #sobre .corda-table { grid-template-columns: minmax(0, 1fr); gap: 24px; margin-top: 20px; }
-  #sobre .corda-rig { width: min(100%, 480px); justify-self: center; }
-  #sobre .corda-phrase { font-size: clamp(10px, 2.55vw, 12px); }
-  #sobre .corda-phrase--two { left: 44%; max-width: 54%; }
-  #sobre .corda-phrase--three { left: 15%; max-width: 83%; }
-  #sobre .corda-copy { margin: 0 6px; }
-  #sobre .corda-copy-text { padding: 14px 4px 18px; font-size: clamp(19px, 4.7vw, 25px); line-height: 1.45; }
-  #sobre .corda-copy::before { left: -8px; width: 68px; height: 52px; }
-  #sobre .corda-footer { padding-left: 10px; min-height: 48px; margin-top: 9px; gap: 10px 20px; }
+@media (max-width:380px) {
+  #sobre.corda-section { padding-inline:20px; }
+  #sobre .corda-title-main { font-size:13.8vw; }
+  #sobre .corda-copy-text { font-size:18px; }
+  #sobre .corda-phrase--one { max-width:35%; font-size:26px; }
+  #sobre .corda-phrase--two { left:36%; max-width:63%; font-size:17px; }
+  #sobre .corda-phrase--three { left:3%; max-width:96%; font-size:25px; }
 }
-@media (max-width: 360px) {
-  #sobre.corda-section { padding-inline: 18px; }
-  #sobre .corda-title-main { font-size: 12.8vw; }
-  #sobre .corda-title-sub { font-size: 29px; }
-  #sobre .corda-phrase--two { left: 42%; max-width: 58%; }
-  #sobre .corda-phrase--three { left: 9%; max-width: 90%; }
-}
-@media (prefers-reduced-motion: reduce) {
-  #sobre *, #sobre *::before, #sobre *::after { animation: none !important; transition: none !important; }
-  #sobre .corda-title-part:first-child, #sobre .corda-title-part:last-child, #sobre .corda-paper { transform: none; }
-  #sobre .corda-copy { transform: none; }
+@media (prefers-reduced-motion:reduce) {
+  #sobre *, #sobre *::before, #sobre *::after { animation:none!important; transition:none!important; }
+  #sobre .corda-title-part:first-child, #sobre .corda-title-part:last-child, #sobre .corda-paper { transform:none; }
 }
