@@ -2253,6 +2253,8 @@ section > *:last-child{
 <style>
 a.weekly-item{color:inherit;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}a.weekly-item:hover{transform:translateY(-3px);box-shadow:0 5px 0 var(--ink)}a.weekly-item:focus-visible{outline:3px solid var(--ink);outline-offset:5px}@media(prefers-reduced-motion:reduce){a.weekly-item{transition:none}a.weekly-item:hover{transform:none}}
 </style>
+<link rel="stylesheet" href="assets/sobre-corda.css?v=20261020">
+<script src="assets/sobre-corda.js?v=20261020" defer></script>
 </head>
 <body>
 <nav class="nav">
@@ -2281,12 +2283,45 @@ a.weekly-item{color:inherit;text-decoration:none;transition:transform .15s ease,
   </div>
 </div>
 
-<section class="manifesto manifesto-poster" id="sobre">
- <div class="section-id">01 / sobre esse treco</div>
- <div class="about-poster">
-  <h2 class="about-title"><span>A gente dá corda</span></h2>
-  <div class="about-eyes">pra ideias que dão trabalho</div>
-  <div class="about-copy">A treco&amp;etc existe para transformar ideias guardadas dentro da gaveta em coisas com valor de verdade. Nós experimentamos, testamos, inventamos, misturamos e, principalmente, fazemos acontecer aquilo que você não sabe como pôr em prática.</div>
+<section class="corda-section" id="sobre" aria-labelledby="corda-title">
+ <div class="corda-inner">
+  <p class="corda-id">SEÇÃO 01 / SOBRE ESSE TRECO</p>
+  <h2 class="corda-title" id="corda-title">
+   <span class="corda-title-main"><span class="corda-title-part">A GENTE</span> <span class="corda-title-part">DÁ CORDA</span></span>
+   <span class="corda-title-sub">pra ideias que dão trabalho</span>
+  </h2>
+  <div class="corda-table">
+   <div class="corda-rig">
+    <svg class="corda-drawing" viewBox="0 0 500 340" aria-hidden="true" focusable="false">
+     <g class="corda-paper">
+      <path d="M46 50 88 37 111 44 149 35 157 65 174 84 158 107 164 143 129 150 109 165 81 148 48 151 39 120 26 102 41 78Z" fill="#E53E24" stroke="#10100E" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M79 102c-23-24 27-45 46-18 17 25-32 52-44 27-10-20 19-36 30-19 11 17-16 30-18 16" fill="none" stroke="#10100E" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="m49 70 9-10m79 69 10 5" fill="none" stroke="#10100E" stroke-width="2" stroke-linecap="round"/>
+     </g>
+     <path class="corda-scribble" pathLength="1" d="M142 86C176 29 235 45 217 80S167 108 183 75 280 27 306 53 302 108 278 91 303 71 341 105 413 133 425 169 378 204 376 176 425 174 413 223 351 273 314 272 325 308 287 306 228 287 179 307"/>
+     <path class="corda-line" d="M156 106C178 102 204 126 190 147C174 174 215 183 219 161C226 139 204 134 208 153Q211 195 224 202"/>
+    </svg>
+    <p class="corda-phrase corda-phrase--one" aria-hidden="true">e se?</p>
+    <p class="corda-phrase corda-phrase--two" aria-hidden="true">será que dá pra fazer?</p>
+    <p class="corda-phrase corda-phrase--three" aria-hidden="true">não sei como colocar em prática</p>
+    <div class="corda-controls" hidden>
+     <button class="corda-handle" type="button" aria-label="Puxar a corda e desenrolar uma ideia" aria-describedby="corda-help">
+      <svg viewBox="0 0 36 36" fill="#FF67A0" aria-hidden="true" focusable="false"><path d="M17 3C29 2 33 9 32 19S25 33 15 32 2 25 3 16 7 4 17 3Z" stroke="#10100E" stroke-width="2.3"/><path d="M13 14c7-6 14 5 6 9-5 3-11-4-6-9Z" fill="#FFF1C9" stroke="#10100E" stroke-width="2"/></svg>
+     </button>
+     <span class="corda-hint" aria-hidden="true"><svg viewBox="0 0 30 23" fill="none"><path d="M28 3C20 1 14 18 3 15m0 0 3-7m-3 7 8 3" stroke="#10100E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>puxa pra ver</span>
+    </div>
+   </div>
+   <div class="corda-copy">
+    <p class="corda-copy-text"><strong>A Treco existe para dar espaço para tudo aquilo que dá na telha.</strong> Se você não sabe por onde começar, nós testamos, inventamos, misturamos e fazemos acontecer por você.</p>
+    <span class="corda-copy-rule" aria-hidden="true"></span>
+   </div>
+  </div>
+  <div class="corda-footer">
+   <button class="corda-again" type="button" hidden>dar mais corda</button>
+   <p class="corda-afterthought"></p>
+  </div>
+  <p class="corda-sr" id="corda-help">Arraste a ponta da corda, toque nela ou use Enter ou espaço. O texto de apresentação está disponível sem interagir.</p>
+  <p class="corda-sr corda-live" role="status" aria-live="polite" aria-atomic="true"></p>
  </div>
 </section>
 
