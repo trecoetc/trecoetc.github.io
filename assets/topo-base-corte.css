@@ -1,0 +1,56 @@
+/* Base de corte: verde da marca, malha e réguas sob o lettering existente. */
+#inicio.craft-hero,
+#inicio .cutting-mat {
+  background-color:var(--green, #064c37)!important;
+}
+#inicio .cutting-mat {
+  background-image:none!important;
+  isolation:isolate;
+}
+#inicio .cutting-mat-surface {
+  position:absolute;
+  z-index:0;
+  top:16px;
+  left:16px;
+  display:block;
+  width:calc(100% - 32px);
+  height:calc(100% - 32px)!important;
+  max-width:none;
+  overflow:hidden;
+  border:1px solid rgba(255,241,201,.48);
+  border-radius:5px;
+  color:#fff1c9;
+  pointer-events:none;
+  user-select:none;
+}
+#inicio .mat-minor { fill:none; stroke:currentColor; stroke-width:.6; stroke-opacity:.22; }
+#inicio .mat-major { fill:none; stroke:currentColor; stroke-width:1; stroke-opacity:.38; }
+#inicio .mat-ruler-ticks { fill:none; stroke:currentColor; stroke-width:.8; stroke-opacity:.65; }
+#inicio .mat-ruler-numbers {
+  fill:currentColor;
+  fill-opacity:.75;
+  stroke:none;
+  font:400 8px "DM Mono",monospace;
+  text-anchor:middle;
+}
+#inicio .mat-ruler-vertical { text-anchor:end; dominant-baseline:middle; }
+@media(max-width:900px) {
+  #inicio .cutting-mat-surface {
+    top:72px;
+    left:12px;
+    width:calc(100% - 24px);
+    height:calc(100% - 84px)!important;
+  }
+}
+@media(max-width:600px) {
+  #inicio .craft-title {
+    font-size:15vw!important;
+  }
+  #inicio .cutting-mat-surface {
+    top:66px;
+    left:10px;
+    width:calc(100% - 20px);
+    height:calc(100% - 78px)!important;
+    border-radius:3px;
+  }
+}
